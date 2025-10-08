@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const latoSans = Lato({
   variable: "--font-lato-sans",
