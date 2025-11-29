@@ -1,9 +1,21 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import {
+  DM_Serif_Text,
+  Geist,
+  Inter,
+  Noto_Serif,
+  Noto_Serif_Display,
+} from "next/font/google";
 import "../globals.css";
 
-const latoSans = Lato({
-  variable: "--font-lato-sans",
+const notoSerif = Noto_Serif_Display({
+  variable: "--font-noto-serif",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
   weight: "400",
   subsets: ["latin"],
 });
@@ -20,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${latoSans.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${notoSerif.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }

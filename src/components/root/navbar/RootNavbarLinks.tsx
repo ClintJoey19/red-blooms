@@ -1,0 +1,39 @@
+import Link from "next/link";
+import React from "react";
+
+const navlinks = [
+  {
+    label: "Home",
+    href: "/",
+  },
+  {
+    label: "About",
+    href: "/",
+  },
+  {
+    label: "Events",
+    href: "/",
+  },
+  {
+    label: "Contact",
+    href: "/",
+  },
+];
+
+const RootNavbarLinks = () => {
+  return (
+    <nav className="flex justify-center items-center gap-20">
+      {navlinks.map(({ label, href }) => (
+        <Link
+          key={label}
+          href={href}
+          className="font-medium hover:text-accent transition"
+        >
+          {label}
+        </Link>
+      ))}
+    </nav>
+  );
+};
+
+export default RootNavbarLinks;
