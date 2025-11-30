@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const navlinks = [
+export const rootNavbarLinks = [
   {
     label: "Home",
     href: "/",
@@ -23,7 +23,7 @@ const navlinks = [
 const RootNavbarLinks = () => {
   return (
     <nav className="flex justify-center items-center gap-20">
-      {navlinks.map(({ label, href }) => (
+      {rootNavbarLinks.map(({ label, href }) => (
         <Link
           key={label}
           href={href}
