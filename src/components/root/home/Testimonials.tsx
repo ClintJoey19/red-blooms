@@ -1,10 +1,10 @@
+import SectionLabel from "@/components/system/SectionLabel";
 import Image from "next/image";
 import React from "react";
 
 const Testimonials = () => {
   return (
     <section className="relative w-full py-32 bg-[#FDFBF7] flex items-center justify-center overflow-hidden">
-      {/* Background Decor (Subtle floral watermark) */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
         <Image
           src="/images/event-2.jpg"
@@ -15,11 +15,10 @@ const Testimonials = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-20 text-center relative z-10">
-        {/* Star Rating using the Accent Color */}
-        <div className="flex justify-center gap-1 mb-8 text-[oklch(0.57_0.209_22.6524)]">
+        <div className="flex justify-center gap-1 mb-8 text-accent">
           {[...Array(5)].map((_, i) => (
             <span key={i} className="text-xl">
-              ★
+              &#9733;
             </span>
           ))}
         </div>
@@ -30,12 +29,12 @@ const Testimonials = () => {
           to wake up from."
         </blockquote>
 
-        <div className="font-sans tracking-widest uppercase text-sm text-gray-500">
+        <SectionLabel>
           — Julianne & Marcus,{" "}
-          <span className="text-[oklch(0.57_0.209_22.6524)] font-bold opacity-80">
+          <span className="text-accent font-bold opacity-80">
             Vogue Magazine Feature, 2023
           </span>
-        </div>
+        </SectionLabel>
       </div>
     </section>
   );

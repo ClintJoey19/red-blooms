@@ -8,15 +8,15 @@ const navlinks = [
   },
   {
     label: "About",
-    href: "/",
+    href: "/about-us",
   },
   {
     label: "Events",
-    href: "/",
+    href: "/events",
   },
   {
     label: "Contact",
-    href: "/",
+    href: "/contact-us",
   },
 ];
 

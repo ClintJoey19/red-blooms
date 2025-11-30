@@ -1,3 +1,4 @@
+import SectionLabel from "@/components/system/SectionLabel";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -30,10 +31,8 @@ const SelectedWorks = () => {
     <section className="w-full">
       <div className="container mx-auto">
         <div className="mb-20 border-b border-gray-200 pb-8">
-          <span className="text-sm font-sans uppercase tracking-widest text-gray-400 mb-2">
-            Portfolio
-          </span>
-          <h2 className="">Selected Works</h2>
+          <SectionLabel>Portfolio</SectionLabel>
+          <h2>Selected Works</h2>
         </div>
         <div className="flex flex-col gap-24">
           {projects.map((project, index) => (
@@ -44,11 +43,11 @@ const SelectedWorks = () => {
               }`}
             >
               <div className="lg:w-1/3 space-y-8">
-                <div className="flex items-center gap-4 text-gray-400 text-sm tracking-widest uppercase">
+                <SectionLabel className="flex items-center gap-4">
                   <span>0{index + 1}</span>
                   <div className="w-12 h-[1px] bg-gray-400"></div>
                   <span>{project.category}</span>
-                </div>
+                </SectionLabel>
 
                 <h3 className="text-gray-900 leading-tight">{project.title}</h3>
 

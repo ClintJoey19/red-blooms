@@ -7,6 +7,8 @@ import {
   Noto_Serif_Display,
 } from "next/font/google";
 import "../globals.css";
+import RootNavbar from "@/components/root/navbar/RootNavbar";
+import RootFooter from "@/components/root/footer/RootFooter";
 
 const notoSerif = Noto_Serif_Display({
   variable: "--font-noto-serif",
@@ -33,7 +35,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${notoSerif.variable} antialiased`}>
-        {children}
+        <main className="w-full flex flex-col gap-24 justify-center">
+          <RootNavbar />
+          {children}
+          <RootFooter />
+        </main>
       </body>
     </html>
   );

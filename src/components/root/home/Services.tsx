@@ -42,7 +42,7 @@ const services = [
 const Services = () => {
   return (
     <section className="w-full bg-[#111111] py-32 text-white">
-      <div className="container mx-auto px-6 lg:px-20">
+      <div className="container mx-auto px-8">
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 border-b border-white/10 pb-8">
           <h2>Our Expertise</h2>
           <p className="text-gray-400 max-w-md mt-4 md:mt-0 text-sm tracking-wide">

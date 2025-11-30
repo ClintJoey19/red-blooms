@@ -1,16 +1,23 @@
+import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { Send } from "lucide-react";
 import React from "react";
 
 const ContactUs = () => {
-  const accentColor = "focus:border-[oklch(0.57_0.209_22.6524)]";
-  const btnBg = "bg-[oklch(0.57_0.209_22.6524)]";
-
   return (
     <section className="relative w-full bg-white overflow-hidden">
-      <div className="flex flex-col lg:flex-row h-full min-h-screen">
-        {/* COLUMN 1: The Form (Clean, Stationery Style) */}
-        <div className="w-full lg:w-1/2 px-6 py-24 lg:p-24 flex flex-col justify-center">
+      <div className="container mx-auto flex flex-col lg:flex-row h-full min-h-screen">
+        <div className="w-full lg:w-1/2 py-32 flex flex-col justify-center">
           <div className="mb-12">
             <span className="text-xs font-sans tracking-[0.2em] text-gray-400 uppercase block mb-4">
               Inquiries
@@ -22,9 +29,8 @@ const ContactUs = () => {
             </p>
           </div>
 
-          <form className="space-y-10 max-w-lg">
-            {/* Name & Email Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <form className="space-y-8 max-w-lg">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative">
                 <Input type="text" placeholder="Name" />
               </div>
@@ -32,45 +38,37 @@ const ContactUs = () => {
                 <Input type="email" placeholder="Email" />
               </div>
             </div>
-
-            {/* Event Type & Date Row */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="relative">
-                {/* Custom Select styling is tricky, using simple here for clarity */}
-                <select
-                  className={`w-full border-b border-gray-300 py-4 text-gray-900 bg-transparent outline-none transition-colors duration-300 ${accentColor}`}
-                  defaultValue=""
-                >
-                  <option value="" disabled>
-                    Event Type
-                  </option>
-                  <option value="wedding">Wedding</option>
-                  <option value="gala">Corporate Gala</option>
-                  <option value="private">Private Dinner</option>
-                  <option value="brand">Brand Activation</option>
-                </select>
+                <Select>
+                  <SelectTrigger className="w-full">
+                    <SelectValue placeholder="Select a fruit" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Fruits</SelectLabel>
+                      <SelectItem value="apple">Apple</SelectItem>
+                      <SelectItem value="banana">Banana</SelectItem>
+                      <SelectItem value="blueberry">Blueberry</SelectItem>
+                      <SelectItem value="grapes">Grapes</SelectItem>
+                      <SelectItem value="pineapple">Pineapple</SelectItem>
+                    </SelectGroup>
+                  </SelectContent>
+                </Select>
               </div>
               <div className="relative">
                 <Input type="date" placeholder="Event Date (Approx)" />
               </div>
             </div>
-
-            {/* The Vision (Textarea) */}
             <div className="relative">
               <Textarea placeholder="Tell us about your vision..."></Textarea>
             </div>
-
-            {/* Submit Button */}
-            <div className="pt-6">
-              <button
-                className={`${btnBg} text-white px-12 py-4 rounded-full text-sm uppercase tracking-widest hover:bg-black transition-colors duration-500 shadow-xl`}
-              >
-                Send Inquiry
-              </button>
+            <div className="flex justify-end">
+              <Button size="xl">
+                Send Inquiries <Send />
+              </Button>
             </div>
           </form>
-
-          {/* Direct Contact Info (Small footer inside the form col) */}
           <div className="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row gap-8 text-sm text-gray-500 font-sans">
             <div>
               <p className="uppercase tracking-widest text-xs text-black mb-2">
@@ -94,18 +92,13 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-
-        {/* COLUMN 2: The Mood Image */}
         <div className="w-full lg:w-1/2 h-[500px] lg:h-auto relative">
           <img
             src="/images/event-3.jpg"
             alt="Event Detail"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* Dark Overlay for depth */}
           <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Optional: Quote overlay on image */}
           <div className="absolute bottom-20 left-10 md:left-20 max-w-sm text-white hidden lg:block">
             <p className="font-serif text-3xl italic leading-tight">
               "Design is the silent ambassador of your brand."

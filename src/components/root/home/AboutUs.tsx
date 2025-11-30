@@ -1,3 +1,4 @@
+import SectionLabel from "@/components/system/SectionLabel";
 import Image from "next/image";
 import React from "react";
 
@@ -7,9 +8,7 @@ const AboutUs = () => {
       <div className="container mx-auto max-lg:px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="relative z-10">
-            <span className="text-xs font-sans tracking-[0.2em] text-muted-foreground uppercase mb-4 block">
-              Behind the Design
-            </span>
+            <SectionLabel>Behind the designs</SectionLabel>
 
             <h2 className="text-gray-900 leading-tight mb-8">
               We don't just plan events. <br />
