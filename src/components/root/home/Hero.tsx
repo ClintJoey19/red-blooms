@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="container mx-auto z-5">
           <div className="w-[600px] flex flex-col gap-8">
             <h1>Your Story, Designed</h1>
-            <p className="text-xl max-w-sm leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-sm leading-relaxed">
               We curate environments where every detail whispers your name.
             </p>
             <div className="flex gap-4">

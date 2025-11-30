@@ -27,7 +27,7 @@ const RootNavbarLinks = () => {
         <Link
           key={label}
           href={href}
-          className="font-medium hover:text-accent transition"
+          className="text-lg font-serif hover:text-accent transition"
         >
           {label}
         </Link>
