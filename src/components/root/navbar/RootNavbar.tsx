@@ -2,7 +2,7 @@ import React from "react";
 import RootNavbarLinks from "./RootNavbarLinks";
 import SystemLogo from "@/components/system/SystemLogo";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const RootNavbar = () => {
   return (
@@ -13,9 +13,12 @@ const RootNavbar = () => {
             <SystemLogo />
           </div>
           <RootNavbarLinks />
-          <div>
-            <Button size="lg">
-              Let's talk <ArrowRight />
+          <div className="flex gap-4">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/auth/sign-up">Register</Link>
+            </Button>
+            <Button size="lg" asChild>
+              <Link href="/auth/sign-in">Login</Link>
             </Button>
           </div>
         </div>
