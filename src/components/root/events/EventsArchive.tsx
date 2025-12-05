@@ -1,10 +1,11 @@
 import React from "react";
 
 const archives = [
-  { name: "The Hearst Gala", loc: "San Simeon", year: "2021" },
-  { name: "Brooklyn Museum Dinner", loc: "New York", year: "2020" },
-  { name: "Private Estate Wedding", loc: "Tuscany", year: "2019" },
+  { id: "1", name: "The Hearst Gala", loc: "San Simeon", year: "2021" },
+  { id: "2", name: "Brooklyn Museum Dinner", loc: "New York", year: "2020" },
+  { id: "3", name: "Private Estate Wedding", loc: "Tuscany", year: "2019" },
   {
+    id: "4",
     name: "TechCrunch Disrupt Afterparty",
     loc: "San Francisco",
     year: "2019",
@@ -18,9 +19,9 @@ const EventsArchive = () => {
         <h3 className="mb-10">Archive</h3>
 
         <div className="flex flex-col">
-          {archives.map((item, idx) => (
+          {archives.map((item) => (
             <div
-              key={idx}
+              key={item.id}
               className="group flex justify-between items-center py-6 border-b border-gray-100 hover:bg-gray-50 px-4 transition-colors cursor-pointer"
             >
               <h5 className="text-xl text-gray-600 group-hover:text-accent transition-colors">

@@ -7,7 +7,7 @@ import React, { useState } from "react";
 
 const projects = [
   {
-    id: 1,
+    id: "1",
     title: "The Vanderbilt Estate",
     category: "Wedding",
     location: "Newport, RI",
@@ -16,7 +16,7 @@ const projects = [
     layout: "full", // Takes up full width
   },
   {
-    id: 2,
+    id: "2",
     title: "Midnight Flora",
     category: "Gala",
     location: "The Met, NYC",
@@ -25,7 +25,7 @@ const projects = [
     layout: "half", // Standard vertical
   },
   {
-    id: 3,
+    id: "3",
     title: "Golden Hour",
     category: "Private Dinner",
     location: "Amalfi, Italy",
@@ -34,7 +34,7 @@ const projects = [
     layout: "half",
   },
   {
-    id: 4,
+    id: "4",
     title: "Vogue Summer Soirée",
     category: "Brand Activation",
     location: "Hamptons, NY",
@@ -43,7 +43,7 @@ const projects = [
     layout: "full",
   },
   {
-    id: 5,
+    id: "5",
     title: "Winter Solstice",
     category: "Wedding",
     location: "Aspen, CO",
@@ -52,7 +52,7 @@ const projects = [
     layout: "half",
   },
   {
-    id: 6,
+    id: "6",
     title: "Chanel Launch",
     category: "Brand Activation",
     location: "Paris, France",

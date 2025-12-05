@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Event = {
-  id: number;
+  id: string;
   title: string;
   category: string;
   location: string;
@@ -19,9 +20,10 @@ const EventsGrid = ({ projects }: EventsGridProps) => {
   return (
     <div className="container mx-auto px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24">
-        {projects.map((project, index) => (
-          <div
+        {projects.map((project) => (
+          <Link
             key={project.id}
+            href={`/events/${project.id}`}
             className={`group cursor-pointer ${
               project.layout === "full" ? "md:col-span-2" : "md:col-span-1"
             }`}
@@ -64,7 +66,7 @@ const EventsGrid = ({ projects }: EventsGridProps) => {
                 </span>
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
