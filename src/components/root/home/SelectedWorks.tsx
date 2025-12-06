@@ -7,18 +7,21 @@ import React from "react";
 
 const projects = [
   {
+    id: "1",
     title: "Midnight in Paris",
     category: "Corporate Gala",
     location: "The Pierre, NYC",
     img: "/images/event-1.jpg",
   },
   {
+    id: "2",
     title: "Coastal Elegance",
     category: "Luxury Wedding",
     location: "Amalfi Coast, Italy",
     img: "/images/event-2.jpg",
   },
   {
+    id: "3",
     title: "Botanical Architecture",
     category: "Private Installation",
     location: "Kyoto, Japan",
@@ -37,7 +40,7 @@ const SelectedWorks = () => {
         <div className="flex flex-col gap-24">
           {projects.map((project, index) => (
             <div
-              key={project.title}
+              key={project.id}
               className={`flex flex-col lg:flex-row gap-12 items-center ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
               }`}
@@ -57,7 +60,7 @@ const SelectedWorks = () => {
 
                 <div>
                   <Link
-                    href="/"
+                    href={`/events/${project.id}`}
                     className="group flex items-center gap-2 hover:gap-3 hover:text-accent underline transition-all"
                   >
                     View Case Study{" "}

@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import {
-  DM_Serif_Text,
-  Geist,
-  Inter,
-  Noto_Serif,
-  Noto_Serif_Display,
-} from "next/font/google";
+import { Inter, Noto_Serif_Display } from "next/font/google";
 import "../globals.css";
 import RootNavbar from "@/components/root/navbar/RootNavbar";
 import RootFooter from "@/components/root/footer/RootFooter";

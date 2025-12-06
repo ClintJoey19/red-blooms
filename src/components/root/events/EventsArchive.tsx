@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const archives = [
@@ -20,8 +21,9 @@ const EventsArchive = () => {
 
         <div className="flex flex-col">
           {archives.map((item) => (
-            <div
+            <Link
               key={item.id}
+              href={`/events/${item.id}`}
               className="group flex justify-between items-center py-6 border-b border-gray-100 hover:bg-gray-50 px-4 transition-colors cursor-pointer"
             >
               <h5 className="text-xl text-gray-600 group-hover:text-accent transition-colors">
@@ -31,7 +33,7 @@ const EventsArchive = () => {
                 <span className="hidden md:block">{item.loc}</span>
                 <span>{item.year}</span>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
